@@ -9,8 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { loadSvgResources } from '../utils/svg.util';
 import { LoginModule } from "../login/login.module";
-import 'hammerjs';
 import { AppRoutingModule } from "../app-routing-module";
+import 'hammerjs';
+import 'rxjs/add/operator/take';
 
 @NgModule({
   imports: [

@@ -49,7 +49,7 @@ mat-icon.avatar{
 }
 .drag-start {
   opacity: 0.5;
-  border: red dashed 2px;
+  border: red dashed 2px !important;
 }
 :host{
   width: 100%;
