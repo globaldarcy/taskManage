@@ -1,6 +1,6 @@
 import { Directive, HostListener, ElementRef, Renderer2, Input } from '@angular/core';
 import { DragDropService } from "../drag-drop.service";
-
+// 指令分为两种: 一种是结构(Structural)型指令和属性(Attribute)型指令
 @Directive({
   selector: '[appDrag][dragTag][dragData][draggedClass]'
 })

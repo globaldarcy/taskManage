@@ -14,6 +14,10 @@
   <div mat-line class="bottom-bar" *ngIf="item.dueDate">
     <span class="due-date">{{item.dueDate | date: "yy-MM-dd"}}</span>
     <mat-icon *ngIf="item.reminder" class="alarm">alarm</mat-icon>
+    <!-- 上面等于下边的写法   ||
+    <ng-template [ngIf]="item.reminder">
+      <mat-icon>alarm</mat-icon>
+    </ng-template>-->
   </div>
   <mat-icon [svgIcon]="avatar" matListAvatar class="avatar"></mat-icon>
 </mat-list-item>
