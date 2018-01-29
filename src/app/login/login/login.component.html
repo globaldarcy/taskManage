@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
   <mat-card>
     <mat-card-header>
       <mat-card-title>登录:</mat-card-title>
@@ -7,15 +7,16 @@
     <mat-card-content>
       <mat-form-field class="full-width" floatPlaceholder="auto" color="info" hintLabel="必填项">
         <!--<span matPrefix>Email:&nbsp;</span>-->
-        <input matInput type="text" required placeholder="您的Email">
+        <input matInput type="text" required placeholder="您的Email" formControlName="email">
+        <mat-error>{{form.controls['email'].errors | json}}</mat-error>
         <!--<span matSuffix>@qq.com</span>
         <mat-hint>Errors appear instantly!</mat-hint>
         <mat-error>Errors2</mat-error>-->
       </mat-form-field>
-      <mat-form-field color="primary" floatPlaceholder="float">
-        <input matInput type="password" required placeholder="您的密码">
+      <mat-form-field class="full-width" color="primary" floatPlaceholder="float">
+        <input matInput type="password" required placeholder="您的密码" formControlName="password">
       </mat-form-field>
-      <button mat-raised-button color="primary" type="button">登录</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">登录</button>
       <!--<button mat-button type="button">登录</button>
       <button mat-icon-button type="button">登录</button>
       <button mat-fab type="button">登录</button>

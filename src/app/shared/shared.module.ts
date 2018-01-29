@@ -24,6 +24,7 @@ import {
 import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
 import { DirectiveModule } from "../directive/directive.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 
 @NgModule({
   imports: [
@@ -74,9 +75,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     MatRadioModule,
     MatSidenavModule,
     MatSelectModule,
-    DirectiveModule
+    DirectiveModule,
+    ImageListSelectComponent
   ],
   entryComponents: [ComfirmDialogComponent],
-  declarations: [ComfirmDialogComponent]
+  declarations: [ComfirmDialogComponent, ImageListSelectComponent]
 })
 export class SharedModule { }
