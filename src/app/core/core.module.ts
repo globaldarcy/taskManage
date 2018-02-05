@@ -13,6 +13,7 @@ import { LoginModule } from "../login/login.module";
 import { AppRoutingModule } from "../app-routing-module";
 import 'hammerjs';
 import 'rxjs/add/operator/take';
+import '../utils/debug.util';
 import { ServicesModule } from "../services/services.module";
 
 @NgModule({

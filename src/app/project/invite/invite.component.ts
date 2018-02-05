@@ -33,4 +33,7 @@ export class InviteComponent implements OnInit {
   displayUser(user: { id: number; name: string }) {
     return user ? user.name : '';
   }
+  onClick() {
+
+  }
 }

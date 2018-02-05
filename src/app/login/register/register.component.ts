@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 export class RegisterComponent implements OnInit {
 
   form: FormGroup
-  private items: string[] = [];
+  public items: string[] = [];
   private nums: number = 16;
   private readonly avatarName = 'avatars';
   constructor(private fb: FormBuilder) { }
@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       avatar: [img]
     });
   }
-  onSubmit(form, ev: Event) {
+  onSubmit({value, valid}, ev: Event) {
 
   }
 }

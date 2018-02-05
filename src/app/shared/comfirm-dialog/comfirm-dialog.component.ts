@@ -18,8 +18,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class ComfirmDialogComponent implements OnInit {
 
-  private title = '';
-  private content = '';
+  public title = '';
+  public content = '';
   constructor(
     private dialogRef: MatDialogRef<ComfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) private data

@@ -9,7 +9,7 @@ import { getDate } from 'date-fns';
 export class SidebarComponent implements OnInit {
 
   @Output() navCLick = new EventEmitter<void>();
-  private today = 'day';
+  public today = 'day';
   constructor() { }
 
   ngOnInit() {
