@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { loadSvgResources } from '../utils/svg.util';
 import { LoginModule } from "../login/login.module";
@@ -17,6 +18,7 @@ import { ServicesModule } from "../services/services.module";
 @NgModule({
   imports: [
     HttpClientModule,
+    HttpModule,
     SharedModule,
     LoginModule,
     AppRoutingModule,
@@ -35,7 +37,12 @@ import { ServicesModule } from "../services/services.module";
     AppRoutingModule,
   ],
   providers: [
-    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
+    {
+      provide: 'BASE_CONFIG',
+      useValue: {
+        uri: 'http://localhost:3000'
+      }
+    }
   ]
 })
 export class CoreModule {
